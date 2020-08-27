@@ -1,6 +1,7 @@
 import json
 import pickle
 import numpy as np
+import os
 
 __location = None
 __data_columns = None
@@ -42,9 +43,12 @@ def predicted_price(location, sqft, bed, bath):
 if __name__ == "__main__":
     print("Starting flask server to begin House price prediction...")
     load_objects()
-    print(get_location_names())
-    print(predicted_price("vishveshwarya layout", 1000, 2, 2))
-    print(predicted_price("2nd phase judicial layout", 1000, 2, 2))
+    # print(get_location_names())
+    # print(predicted_price("vishveshwarya layout", 1000, 2, 2))
+    # print(predicted_price("2nd phase judicial layout", 1000, 2, 2))
+    # print(os.getcwd())
+    # print(os.path)
+    print(os.stat('columns.json'))
 
 
 
